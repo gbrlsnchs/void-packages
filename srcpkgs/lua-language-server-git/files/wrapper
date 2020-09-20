@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# This script is copied from
+# https://aur.archlinux.org/cgit/aur.git/tree/wrapper?h=lua-language-server-git.
+
+TMPPATH=$(mktemp -d "/tmp/@PKGNAME@.XXXX)")
+DEFAULT_LOGPATH="$TMPPATH/log"
+DEFAULT_METAPATH="$TMPPATH/meta"
+
+cd /usr/share/@PKGNAME@
+exec /usr/lib/@PKGNAME@/@PKGNAME@ -E ./main.lua \
+  --logpath="$DEFAULT_LOGPATH" \
+  --metapath="$DEFAULT_METAPATH" \
+  "$@"
