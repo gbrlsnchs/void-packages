@@ -1,0 +1,15 @@
+# Template file for 'kmeans-colors'
+pkgname=kmeans-colors
+version=0.3.4
+revision=1
+build_style=cargo
+short_desc="Program to find dominant colors in images using k-means clustering"
+maintainer="Gabriel Sanches <gabriel@gsr.dev>"
+license="MIT, Apache-2.0"
+homepage="https://github.com/okaneco/kmeans-colors"
+distfiles="https://github.com/okaneco/${pkgname}/archive/${version}.tar.gz"
+checksum=7307c4b6a3a02653eb151ba63b43d8b6e3966fb01ca41497c8e4b4d3fa2739b7
+
+post_install() {
+	vlicense LICENSE-MIT
+}
