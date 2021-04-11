@@ -1,0 +1,19 @@
+# Template file for 'font-nonicons-git'
+pkgname=font-nonicons-git
+version=0
+revision=1
+build_style=fetch
+depends="font-util"
+short_desc="Set of icons representing programming languages, designing & development tools"
+maintainer="Gabriel Sanches <gabriel@gsr.dev>"
+license="custom:None"
+homepage="https://github.com/yamatsum/nonicons"
+distfiles="https://github.com/yamatsum/nonicons/raw/master/dist/nonicon.ttf"
+checksum=66dcd069479ffa07ce5bfc2dec1ef27372b3be491a733a0be70b35de428178c9
+
+font_dirs="/usr/share/fonts/TTF"
+
+do_install() {
+	vmkdir usr/share/fonts/TTF
+	vcopy *.ttf usr/share/fonts/TTF
+}
